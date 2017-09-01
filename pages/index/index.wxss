@@ -1,0 +1,157 @@
+page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    z-index: 999;
+}
+
+.nav .item {
+    float: left;
+    width: 20%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 16px;
+}
+
+.nav .item.active {
+    background: rgba(255, 129, 159, .9);
+}
+
+
+/* 内容*/
+
+.content {
+    height: 100%;
+    overflow: hidden;
+}
+
+.info-tip {
+    position: fixed;
+    left: 0;
+    top: 80rpx;
+    display: block;
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    background: rgba(255, 129, 159, .8);
+    color: #fff;
+    font-size: 12px;
+    z-index: 999;
+}
+
+
+/* 刷新返回顶部按钮*/
+
+.refresh-btn-wrapper {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 10px;
+}
+
+.refresh-btn-wrapper .refresh-btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(//s3a.pstatp.com/resource/neihan_wap/static/image/refreshicon_0e30755.png) no-repeat center center;
+    background-size: 100%;
+}
+
+.refresh-btn-wrapper .refresh-btn.spinner {
+    -webkit-animation: rotator-anticlock .5s linear infinite;
+    animation: rotator-anticlock .5s linear infinite;
+}
+
+@keyframes rotator-anticlock {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+
+/* 段友秀 */
+
+.list-column__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    background-color: #fdfdfd;
+}
+
+.list-column__wrapper .item-column {
+    padding-right: 10rpx;
+    padding-bottom: 10rpx;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.list-column__wrapper .item-column:nth-of-type(2n) {
+    padding-right: 0;
+}
+
+.list-column__wrapper .item-column .col-img {
+    width: 100%;
+    display: block;
+}
+
+.list-column__wrapper .item-column .col-ft {
+    background-color: #f8f8f8;
+    height: 40rpx;
+    line-height: 40rpx;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 0 10rpx;
+}
+
+.list-column__wrapper .item-column .col-avatar {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    position: relative;
+    top: -15rpx;
+    margin-right: 10rpx;
+}
+
+.list-column__wrapper .item-column .col-username {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #787878;
+}
+
+.list-column__wrapper .item-column .col-like__num {
+    font-size: 12px;
+    color: #787878;
+    margin-right: 10rpx;
+}
+
+.list-column__wrapper .item-column .col-like__btn {
+    display: inline-block;
+    width: 24rpx;
+    height: 24rpx;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAeCAMAAACVFoclAAAAP1BMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzFR7UUAAAAFHRSTlMAHt938PzJjQUQmE861aqpfW5WLxpLLXgAAAB+SURBVCjPrdBJDsIwEETR9th2Eua6/1lBkUBYsfgb/vqpFmXHwsm7/SpEqTYA0kpAiYBWAqUDUCWgKwE9CESbdtanmt7dwpfImpU3095LaF5FUVDoDxsRhZMogcTFSGwkqpG4k4iNRDIQuZNwG0SevDUKP4jFRtF8XMlL28ETgFgt8tnmHnEAAAAASUVORK5CYII=);
+    background-size: cover;
+    background-position: left center;
+}

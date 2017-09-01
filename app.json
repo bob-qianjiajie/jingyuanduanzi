@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff819f",
+    "navigationBarTitleText": "经院段子",
+    "navigationBarTextStyle":"white"
+  }
+}
